@@ -4,6 +4,30 @@
     box-sizing: border-box;
 }
 
+:root {
+    --max-size: 960px;
+    --box-size: 60px;
+}
+
 ul {
     list-style: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(var(--box-size)*16);
+}
+
+.square {
+    width: var(--box-size);
+    height: var(--box-size);
+    border: black solid 2px;
 }
