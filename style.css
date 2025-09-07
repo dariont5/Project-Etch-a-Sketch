@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    gap: 20px;
 }
 
 .container {
@@ -31,4 +32,10 @@ body {
     width: var(--box-size);
     height: var(--box-size);
     border: black solid 2px;
+}
+
+button {
+    font-size: 40px;
+    width: 400px;
+    height: 60px;
 }

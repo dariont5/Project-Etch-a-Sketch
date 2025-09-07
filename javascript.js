@@ -20,7 +20,10 @@ const containerSize = parseInt(getComputedStyle(root).getPropertyValue('--max-si
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
     container.textContent = '';
-    const sideLength = +prompt('How many squares should the sides of the grid be?');
+    let sideLength = +prompt('How many squares should the sides of the grid be?');
+    while (sideLength > 100) {
+        sideLength = +prompt('How many squares should the sides of the grid be? \n *note: it can be at max 100');
+    }
     [row, col] = [sideLength, sideLength];
     let boxSize = containerSize/sideLength;
     boxSize = boxSize+'px';
