@@ -32,6 +32,7 @@ body {
     width: var(--box-size);
     height: var(--box-size);
     border: black solid 2px;
+    background-color: rgb(0,0,0,0);
 }
 
 button {

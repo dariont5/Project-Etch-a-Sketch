@@ -10,8 +10,13 @@ function generateGrid() {for (let i = 0; i < row; i++) {
         const squareDiv = document.createElement('div');
         squareDiv.className = 'square';
         container.appendChild(squareDiv);
+        squareDiv.transparency = 0;
         squareDiv.addEventListener('mouseover', () => {
-            squareDiv.style.backgroundColor = 'black';
+            if (squareDiv.transparency < 1) {
+                squareDiv.transparency += .1;
+            }
+            const newColor = `rgb(0,0,0,${squareDiv.transparency})`
+            squareDiv.style.setProperty('background-color', newColor);
     })
 }}}
 
